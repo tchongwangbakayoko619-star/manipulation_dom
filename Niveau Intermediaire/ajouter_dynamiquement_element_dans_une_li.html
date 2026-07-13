@@ -1,0 +1,29 @@
+<!Doctype>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajouter element dans une liste dynamiquement</title>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <ul id="liste">
+        <li>orange</li>
+        <li>banane</li>
+    </ul>
+    <input type="text" id="fruit" placeholder="ajouter un fruit">
+    <button id="btn" onclick="addElement()">ajouter</button>
+    
+    <script>
+        function addElement() {
+            let fruit = document.getElementById("fruit").value;
+            let liste = document.getElementById("liste");
+            let li = document.createElement("li");
+            li.textContent = fruit;
+            liste.appendChild(li);
+        }
+       
+    </script>
+</body>
+</html>
