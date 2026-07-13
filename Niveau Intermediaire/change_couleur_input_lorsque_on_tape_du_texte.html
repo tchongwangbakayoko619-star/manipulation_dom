@@ -1,0 +1,24 @@
+<!Doctype>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input changer couleurs lorsque on saisi du texte</title>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <input type="text" id="input" placeholder="saisir du texte" style="color:white;">
+    <script>
+        let input = document.getElementById("input");
+        input.addEventListener("input",function(){
+            if(input.value.length>0){
+                input.style.backgroundColor="blue";
+            }
+            else{
+                input.style.backgroundColor="white";
+            }
+        })
+    </script>
+</body>
+</html>
