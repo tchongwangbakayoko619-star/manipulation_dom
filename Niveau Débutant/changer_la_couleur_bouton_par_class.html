@@ -1,4 +1,4 @@
-<!Doctype>
+<!Doctype html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -8,12 +8,12 @@
 </head>
 <body>
     <h1>DOM Manipulation</h1>
-    <button class="btn" onclick="changeColor()">appuyer ici pour changer la couleur du bouton</button>
+    <button class="btn">appuyer ici pour changer la couleur du bouton</button>
     <script>
-        function changeColor() {
+      
             let button = document.getElementsByClassName("btn")[0];
             button.style.backgroundColor="red";
-        }
+        
     </script>
 </body>
 </html>
