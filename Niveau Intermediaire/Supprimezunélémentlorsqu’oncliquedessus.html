@@ -1,0 +1,25 @@
+<!DOctype>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <title>Supprimer un element lorsqu’on clique dessus</title>
+    </head>
+    <body>
+        <h1>Supprimer un element lorsqu’on clique dessus</h1>
+        <div id="monElement">Cliquez-moi pour disparaître !</div>
+
+       <script>
+                const element = document.querySelector("#monElement");
+
+               element.addEventListener("click", function() {
+                element.remove(); 
+         });
+        </script>
+
+    </body>
+</html>
