@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification validité E-mail</title>
+</head>
+
+<body>
+
+<h1>Vérification validité E-mail</h1>
+
+<form id="valider">
+    <label for="email">Votre Email :</label>
+
+    <input type="email" id="email"  placeholder="exemple@mail.com" required  >
+
+    <button type="submit">Envoyer</button>
+
+    <p id="message"></p>
+</form>
+
+<script>
+
+const formulaire = document.getElementById("valider");
+const emailInput = document.getElementById("email");
+const message = document.getElementById("message");
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+formulaire.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const valeurEmail = emailInput.value;
+
+    if (emailRegex.test(valeurEmail)) {
+        message.textContent = "Email valide !";
+        message.style.color = "green";
+    } else {
+        message.textContent = "Format d'email invalide.";
+        message.style.color = "red";
+    }
+
+});
+
+</script>
+
+</body>
+</html>
